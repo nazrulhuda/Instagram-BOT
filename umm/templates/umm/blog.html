@@ -1,0 +1,25 @@
+
+{% extends "umm/base.html" %}
+{% block content %}
+
+   <h1  style="background-color: rgba(242,252,195,0.8); color:black; box-shadow: 2px 2px 7px 1px #1C6EA4;""> </h1>
+   {% for a in kola %}
+   <article class="media content-section">
+       <img class="rounded-circle article-img" src="{{a.name.profile.image.url}}">
+       <div class="media-body">
+           <div class="article-metadata">
+                <a class="mr-2" href="#">{{ a.name }}</a>
+                 <small class="text-muted">{{ a.age|date:"F d, Y" }}</small>
+           </div>
+    <h2><a class="article-title" href="#">{{ a.title }}</a></h2>
+
+    <p class="article-content">{{ a.no }}</p>
+
+  </div>
+</article>
+
+   {% endfor %}
+{% endblock %}
+
+
+

@@ -1,0 +1,47 @@
+
+{% extends "umm/base.html" %}
+{% block content %}
+
+   <h1  style="background-color: rgba(242,252,195,0.8); color:black; box-shadow: 2px 2px 7px 1px #1C6EA4;"> </h1>
+<form method='GET' action='queryset_list'>
+    <input type='text' name='q' placeholder='Search posts' value='{{ request.GET.q }}' />
+     <input type='Submit' value='Search' />
+</form>
+
+
+           {% for a in ri %}
+<article class="card-body">
+    <img class="card-img-top" src="{{a.image_url}}">
+
+    <h5 class="card-title">Model :{{a.Model}}</h5>
+
+               <p class="card-text">Description: {{a.Description}}</p>
+               <p class="card-text">Brand: {{a.Brand}}</p>
+               <p class="card-text">Size: {{a.Size}}inch</p>
+                <p class="card-text"> price :{{a.price}} tk</p>
+
+
+
+
+    <small class="card-text">{{ a.Posted|date:"F d, Y" }}</small>
+</article>
+
+
+
+   {% endfor %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
