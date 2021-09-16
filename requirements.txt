@@ -2,6 +2,7 @@ asgiref==3.4.1
 backports.entry-points-selectable==1.1.0
 certifi==2021.5.30
 cffi==1.14.6
+charset-normalizer==2.0.5
 cryptography==3.4.8
 distlib==0.3.2
 Django==3.2.6
@@ -11,14 +12,21 @@ django-rest-knox==4.1.0
 djangorestframework==3.12.4
 filelock==3.0.12
 gunicorn==20.1.0
+heroku==0.1.4
+idna==3.2
 mysqlclient==2.0.3
 numpy==1.21.2
 Pillow==8.3.2
 pipenv==2021.5.29
 platformdirs==2.2.0
 pycparser==2.20
+PyOpenGL @ file:///H:/New%20folder/PyOpenGL-3.1.5-cp39-cp39-win_amd64.whl
+PyOpenGL-accelerate @ file:///H:/New%20folder/PyOpenGL_accelerate-3.1.5-cp39-cp39-win_amd64.whl
+python-dateutil==1.5
 pytz==2021.1
+requests==2.26.0
 six==1.16.0
 sqlparse==0.4.1
+urllib3==1.26.6
 virtualenv==20.7.2
 virtualenv-clone==0.5.6
