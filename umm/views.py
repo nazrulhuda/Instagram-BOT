@@ -7,13 +7,13 @@ from django.views.generic import ListView,DetailView,CreateView,UpdateView,Delet
 from django.db.models import Q
 
 
-class PostListView(ListView):
+class PostListView(LoginRequiredMixin,ListView):
     model=Post
     template_name='umm/blog.html'
     context_object_name='posts'
     ordering=['-age'] 
 
-class PostDetailView(DetailView):
+class PostDetailView(LoginRequiredMixin,DetailView):
     model=Post
 
 
