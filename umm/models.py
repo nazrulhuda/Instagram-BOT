@@ -1,8 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
-
-
+from django.urls import reverse
 
 
 
@@ -16,36 +15,14 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def get_absolute_url(self):
+        return reverse('post-detail', kwargs={'pk': self.pk})
 
 
-class Phone(models.Model):
+    
 
-    Model = models.CharField(max_length=100)
-    Brand=models.CharField(max_length=100)
-    Description = models.TextField()
-    Posted = models.DateTimeField(default=timezone.now)
-    image_url=models.CharField(max_length=2083)
-    Price=models.FloatField()
-    Size=models.FloatField()
-
-    def __str__(self):
-        return self.Model
-
-
-
-
-
-
-
-class Review(models.Model):
-    pt = models.ForeignKey(User, on_delete=models.CASCADE)
-    on=models.ForeignKey(Phone,on_delete=models.CASCADE)
-    text=models.TextField()
-
-    def __str__(self):
-        return str(self.on)
-
-
+    
 
 
 

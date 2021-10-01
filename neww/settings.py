@@ -140,3 +140,4 @@ LOGIN_URL='login'
 
 django_heroku.settings(locals())
 
+
