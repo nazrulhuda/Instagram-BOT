@@ -7,7 +7,7 @@ from django.urls import reverse
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
-    no = models.TextField()
+    content = models.TextField()
     age = models.DateTimeField(default=timezone.now)
     name = models.ForeignKey(User, on_delete=models.CASCADE)
 
