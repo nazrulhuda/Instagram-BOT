@@ -16,12 +16,15 @@
 
               <title>{{title}}</title>
     {% else %}
-               <title>True</title>
+               <title>Get Your Mechanic</title>
     {% endif %}
 </head>
-<body>
+<body style="background-color: #8BAAAD;" >
          <header class="site-header">
-  <nav class="navbar navbar-expand-md bg-steel navbar-dark fixed-top" >
+  <nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background-color:#6d597a ;"  >
+ 
+  
+  
     <div class="container">
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,9 +37,10 @@
         <!-- Navbar Right Side -->
         <div class="navbar-nav">
             {% if user.is_authenticated %}
-                  <a class="nav-item nav-link"    href="{% url 'ji' %}">HomePage</a>
+            
+                  <a class="nav-item nav-link"    href="{% url 'post-create' %}">New Appointment</a>
+                  <a class="nav-item nav-link"    href="{% url 'ji' %}">Home</a>
                   <a class="nav-item nav-link"  href="{% url 'jina' %}">About Us</a> 
-                  <a class="nav-item nav-link"    href="{% url 'post-create' %}">New Post</a>
                   <a class="nav-item nav-link"  href="{% url 'profile' %}">Profile</a>
                   <a class="nav-item nav-link"    href="{% url 'logout' %}">Logout</a>
             {% else %}

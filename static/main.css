@@ -1,6 +1,5 @@
 body {
-    background: black;
-    color: #333333;
+    background-image: url("bg.jpg");
     margin-top: 5rem;
 }
 

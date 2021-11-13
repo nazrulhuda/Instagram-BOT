@@ -20,7 +20,7 @@ class PostDetailView(LoginRequiredMixin,DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    fields =['title', 'content']
+    fields =['address', 'comment','license','mechanic','car','appointment','phone']
     def form_valid(self, form):
         form.instance.name = self.request.user
         return super().form_valid(form)
@@ -28,7 +28,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields =['title', 'content']
+    fields =['address','mechanic','appointment']
     def form_valid(self, form):
         form.instance.name = self.request.user
         return super().form_valid(form)

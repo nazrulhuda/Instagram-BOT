@@ -11,9 +11,14 @@
                 <a class="mr-2" href="#">{{ post.name }}</a>
                  <small class="text-muted">{{ post.age|date:"F d, Y" }}</small>
            </div>
-        <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+        <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.address }}</a></h2>
 
-       <p class="article-content">{{ post.content }}</p>
+       <p class="article-content">{{ post.comment }}</p>
+       <p class="article-content">{{ post.address }}</p>
+       <p class="article-content">{{ post.car }}</p>
+       <p class="article-content">{{ post.license }}</p>
+       <p class="article-content">{{ post.appointment }}</p>
+       <p class="article-content">{{ post.mechanic }}</p>
 
      </div>
    </article>
