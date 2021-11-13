@@ -26,7 +26,7 @@ SECRET_KEY = 'dct_+2gkf-(@)x&6%-(sx3*542349)u6k^x-)&wlsuatzorf=m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nazrulhudashantojoss.herokuapp.com', '127.0.0.1' ]
+ALLOWED_HOSTS = ['getmechanics.herokuapp.com', '127.0.0.1' ]
 
 
 # Application definition
