@@ -14,8 +14,5 @@ class Profile(models.Model):
     def save(self, *args, **kwargs):
         super(Profile,self).save(*args,**kwargs)
         img=Image.open(self.image.path)
-        if img.height>500 or img.width>500:
-            output_size=(500,500)
-            img.thumbnail(output_size)
-            img.save(self.image.path)
+        
 # Create your models here.
