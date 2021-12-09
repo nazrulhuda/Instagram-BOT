@@ -10,20 +10,15 @@
                 <a class="mr-2" href="#">{{ object.name }}</a>
                  <small class="text-muted">{{ object.age|date:"F d, Y" }}</small>
                  {% if object.name == user %}
-                    <div>
-                      <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
-                      <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
-                    </div>
-                 {% endif %}
+          <div>
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+          </div>
+        {% endif %}
            </div>
-       <h2 class="article-title">{{ object.address }}</h2>
+        <h2 class="article-title">{{ object.title }}</h2>
 
-       <p class="article-content">{{ object.comment }}</p>
-       <p class="article-content">{{ object.appointment }}</p>
-       <p class="article-content">{{ post.phone }}</p>
-       <p class="article-content">{{ post.mechanic }}</p>
-     
-
+       <p class="article-content">{{ object.content }}</p>
 
      </div>
    </article>
